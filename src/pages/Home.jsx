@@ -4,7 +4,7 @@ import CategoryCard from "../components/CategoryCard";
 
 const Home = () => {
   return (
-    <div className="bg-sky-100 min-h-screen"> {/* ✅ Sky blue background */}
+    <div className="bg-sky-100 min-h-screen"> 
       <Hero />
       <section className="p-6 max-w-6xl mx-auto">
         <h2 className="text-2xl font-bold mb-6 text-center text-blue-700">
