@@ -5,6 +5,7 @@ import Men from "./pages/Men";
 import Women from "./pages/Women";
 import Cart from "./pages/Cart";
 import Footer from "./components/Footer";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   const [route, setRoute] = useState(window.location.pathname);
@@ -21,13 +22,15 @@ function App() {
   if (route === "/cart") Page = Cart;
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-grow">
-        <Page />
-      </main>
-      <Footer />
-    </div>
+    <CartProvider>
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-grow">
+          <Page />
+        </main>
+        <Footer />
+      </div>
+    </CartProvider>
   );
 }
 

@@ -1,6 +1,9 @@
 import React from "react";
+import { useCart } from "../context/CartContext";
 
 const ProductCard = ({ product }) => {
+  const { addToCart } = useCart();
+
   return (
     <div className="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition">
       <img
@@ -12,7 +15,10 @@ const ProductCard = ({ product }) => {
         {product.name}
       </h2>
       <p className="text-gray-600">KES {product.price}</p>
-      <button className="mt-3 w-full bg-sky-600 text-white py-2 rounded-lg hover:bg-sky-700">
+      <button
+        onClick={() => addToCart(product)}
+        className="mt-3 w-full bg-sky-600 text-white py-2 rounded-lg hover:bg-sky-700"
+      >
         Add to Cart
       </button>
     </div>
