@@ -1,9 +1,9 @@
 import React from "react";
-import { menProducts } from "../data/men";   // ✅ import from men.js
+import { menProducts } from "../data/men";  
 import ProductCard from "../components/ProductCard";
 
 const Men = () => (
-  <div className="min-h-screen p-6">
+  <div className="min-h-screen p-6 bg-sky-100">
     <h2 className="text-3xl font-bold text-center text-sky-700 mb-8">
       Men's Collection
     </h2>

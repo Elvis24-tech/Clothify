@@ -4,22 +4,21 @@ import CategoryCard from "../components/CategoryCard";
 
 const Home = () => {
   return (
-    <div>
-      {/* Hero Banner */}
+    <div className="bg-sky-100 min-h-screen"> {/* ✅ Sky blue background */}
       <Hero />
-
-      {/* Categories Section */}
       <section className="p-6 max-w-6xl mx-auto">
-        <h2 className="text-2xl font-bold mb-6 text-center text-blue-700">Shop by Category</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center text-blue-700">
+          Shop by Category
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <CategoryCard
             title="Men"
-            img="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb"
+            img="https://myfz.in/wp-content/uploads/2023/05/1-Mens-Wear-Banner-Fashion-Zone-1-1024x576.jpg"
             link="/men"
           />
           <CategoryCard
             title="Women"
-            img="https://images.unsplash.com/photo-1520974749544-5f18f3cc2bb0"
+            img="https://safaaworld.com/cdn/shop/articles/Blog-Image_b21adffc-7377-40da-963c-8d43a00cd714.jpg?v=1726489198"
             link="/women"
           />
         </div>
