@@ -1,14 +1,28 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
 const Navbar = () => {
+  const { itemCount } = useCart(); // get item count from context
+
   return (
-    <nav className="flex justify-between items-center p-4 bg-sky-900 shadow-md">
-      <h1 className="text-2xl font-bold text-white">Clothify</h1>
-      <div className="flex gap-6">
-        <a href="/" className="text-gray-200 hover:text-white transition">Home</a>
-        <a href="/men" className="text-gray-200 hover:text-white transition">Men</a>
-        <a href="/women" className="text-gray-200 hover:text-white transition">Women</a>
-        <a href="/cart" className="text-gray-200 hover:text-white transition">Cart</a>
+    <nav className="flex justify-between items-center p-4 bg-sky-900 shadow-md text-white">
+      {/* Brand */}
+      <h1 className="text-2xl font-bold">Clothify</h1>
+
+      {/* Navigation Links */}
+      <div className="flex gap-6 items-center">
+        <Link to="/" className="hover:text-sky-300">Home</Link>
+        <Link to="/men" className="hover:text-sky-300">Men</Link>
+        <Link to="/women" className="hover:text-sky-300">Women</Link>
+        <Link to="/cart" className="hover:text-sky-300 relative">
+          Cart
+          {itemCount > 0 && (
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[0.65rem] w-4 h-4 flex items-center justify-center rounded-full">
+              {itemCount}
+            </span>
+          )}
+        </Link>
       </div>
     </nav>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../context/CartContext"; 
 
 const Cart = () => {
   const { cart, removeFromCart, clearCart } = useCart();
@@ -13,10 +13,7 @@ const Cart = () => {
       ) : (
         <div className="space-y-4">
           {cart.map((item) => (
-            <div
-              key={item.id}
-              className="flex justify-between items-center border-b pb-3"
-            >
+            <div key={item.id} className="flex justify-between items-center border-b pb-3">
               <div>
                 <h2 className="font-semibold text-sky-800">{item.name}</h2>
                 <p className="text-gray-600">
@@ -31,16 +28,14 @@ const Cart = () => {
               </button>
             </div>
           ))}
+
           <div className="flex justify-between items-center mt-6 font-semibold">
             <span>Total:</span>
             <span>
-              KES{" "}
-              {cart.reduce(
-                (total, item) => total + item.price * item.quantity,
-                0
-              )}
+              KES {cart.reduce((total, item) => total + item.price * item.quantity, 0)}
             </span>
           </div>
+
           <button
             onClick={clearCart}
             className="mt-4 w-full bg-sky-600 text-white py-2 rounded-lg hover:bg-sky-700"
