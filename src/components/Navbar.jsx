@@ -3,14 +3,11 @@ import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 
 const Navbar = () => {
-  const { itemCount } = useCart(); // get item count from context
+  const { itemCount } = useCart(); 
 
   return (
     <nav className="flex justify-between items-center p-4 bg-sky-900 shadow-md text-white">
-      {/* Brand */}
       <h1 className="text-2xl font-bold">Clothify</h1>
-
-      {/* Navigation Links */}
       <div className="flex gap-6 items-center">
         <Link to="/" className="hover:text-sky-300">Home</Link>
         <Link to="/men" className="hover:text-sky-300">Men</Link>
