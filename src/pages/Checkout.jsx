@@ -81,7 +81,7 @@ const Checkout = () => {
         />
         <input
           type="tel"
-          placeholder="Phone Number"
+          placeholder="Phone Number(e.g., 2547XXXXXXXX)"
           className="w-full p-2 border rounded"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
