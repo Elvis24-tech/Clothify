@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 
 const Navbar = () => {
-  const { itemCount } = useCart(); 
+  const { itemCount } = useCart();
 
   return (
     <nav className="flex justify-between items-center p-4 bg-sky-900 shadow-md text-white">
