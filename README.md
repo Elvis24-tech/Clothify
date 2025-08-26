@@ -113,6 +113,8 @@ src/
 5. Open a pull request
 
 ---
+Backend repository:
+https://github.com/Elvis24-tech/Clothify-backend
 
 ## License
 
